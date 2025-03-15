@@ -31,7 +31,7 @@ const Hero = () => {
           
           <div className="flex space-x-4">
             <a 
-              href="https://www.linkedin.com/in/vaishnavi-somarouthu-2b9952b4" 
+              href="https://www.linkedin.com/in/vaishnavi-somarouthu-2b99522b4/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-tech-darker border border-tech-purple/30 hover:border-tech-purple/60 px-4 py-2 rounded-md flex items-center space-x-2 text-gray-300 hover:text-white transition-all"
@@ -40,7 +40,7 @@ const Hero = () => {
               <span>LinkedIn</span>
             </a>
             <a 
-              href="https://github.com/aish-2906" 
+              href="https://github.com/aish-2306" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-tech-darker border border-tech-purple/30 hover:border-tech-purple/60 px-4 py-2 rounded-md flex items-center space-x-2 text-gray-300 hover:text-white transition-all"

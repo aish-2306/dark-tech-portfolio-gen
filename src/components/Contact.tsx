@@ -63,7 +63,7 @@ const Contact = () => {
               <h4 className="text-lg font-medium text-white mb-4">Connect with me</h4>
               <div className="flex space-x-3">
                 <a 
-                  href="https://www.linkedin.com/in/vaishnavi-somarouthu-2b9952b4" 
+                  href="https://www.linkedin.com/in/vaishnavi-somarouthu-2b99522b4/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-tech-darker p-3 rounded-full border border-tech-blue/30 hover:border-tech-blue/60 text-tech-blue hover:text-white hover:bg-tech-blue/20 transition-colors"
@@ -71,7 +71,7 @@ const Contact = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://github.com/aish-2906" 
+                  href="https://github.com/aish-2306" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-tech-darker p-3 rounded-full border border-tech-purple/30 hover:border-tech-purple/60 text-tech-purple hover:text-white hover:bg-tech-purple/20 transition-colors"
@@ -87,7 +87,7 @@ const Contact = () => {
             
             <div className="space-y-4">
               <a 
-                href="https://www.linkedin.com/in/vaishnavi-somarouthu-2b9952b4" 
+                href="https://www.linkedin.com/in/vaishnavi-somarouthu-2b99522b4/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center p-4 bg-tech-darker/70 rounded-lg border border-tech-blue/20 hover:border-tech-blue/40 group transition-all"
@@ -101,7 +101,7 @@ const Contact = () => {
               </a>
               
               <a 
-                href="https://github.com/aish-2906" 
+                href="https://github.com/aish-2306" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center p-4 bg-tech-darker/70 rounded-lg border border-tech-purple/20 hover:border-tech-purple/40 group transition-all"
@@ -116,9 +116,15 @@ const Contact = () => {
             </div>
             
             <div className="mt-8">
-              <Button className="w-full bg-gradient-to-r from-tech-blue to-tech-purple hover:from-tech-blue/90 hover:to-tech-purple/90 text-white border-none">
-                Download Resume
-              </Button>
+              <a 
+                href="file:///C:/Users/vaish/OneDrive/Documents/RESUME_VAISHNAVI_SOMAROUTHU.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full bg-gradient-to-r from-tech-blue to-tech-purple hover:from-tech-blue/90 hover:to-tech-purple/90 text-white border-none">
+                  Download Resume
+                </Button>
+              </a>
             </div>
           </div>
         </div>
