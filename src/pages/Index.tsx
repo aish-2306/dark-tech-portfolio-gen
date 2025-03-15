@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Element } from 'react-scroll';
+import { useTheme } from '@/contexts/ThemeContext';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -12,8 +13,10 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="min-h-screen bg-tech-dark overflow-x-hidden">
+    <div className={`min-h-screen ${theme === 'light' ? 'bg-gray-100' : 'bg-tech-dark'} overflow-x-hidden`}>
       <Navbar />
       
       <Element name="hero">

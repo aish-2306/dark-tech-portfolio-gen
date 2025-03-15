@@ -2,8 +2,11 @@
 import React from 'react';
 import { Cpu, Code, Shield, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const About = () => {
+  const { theme } = useTheme();
+  
   const skills = [
     { 
       icon: <Code className="h-8 w-8 text-tech-blue" />, 
@@ -36,13 +39,13 @@ const About = () => {
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto mb-8"></div>
           
-          <p className="text-gray-300 max-w-3xl mx-auto mb-8 text-lg">
+          <p className={`${theme === 'light' ? 'text-gray-700' : 'text-gray-300'} max-w-3xl mx-auto mb-8 text-lg`}>
             Motivated and detail-oriented B.Tech student in Computer and Communication Engineering at Amrita
             Vishwa Vidyapeetam. Passionate about web development, UI/UX design, and AI-driven solutions
             with expertise in HTML, CSS, JavaScript, React.js, and cybersecurity fundamentals.
           </p>
           
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
+          <p className={`${theme === 'light' ? 'text-gray-600' : 'text-gray-400'} max-w-3xl mx-auto text-lg`}>
             Experienced in optimizing MIMO systems, technical research, and real-world AI applications. Proven leadership as
             a Cultural Coordinator with strong teamwork abilities and achievements in sports and cultural
             activities.
@@ -51,13 +54,13 @@ const About = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <Card key={index} className="bg-tech-darker border-tech-purple/20 hover:border-tech-purple/40 transition-all">
+            <Card key={index} className={`${theme === 'light' ? 'bg-white border-gray-200 hover:border-tech-purple/30' : 'bg-tech-darker border-tech-purple/20 hover:border-tech-purple/40'} transition-all`}>
               <CardContent className="p-6 text-center">
-                <div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center bg-tech-darker rounded-full border border-tech-purple/20 animate-pulse-glow">
+                <div className={`mx-auto mb-4 w-16 h-16 flex items-center justify-center ${theme === 'light' ? 'bg-gray-50' : 'bg-tech-darker'} rounded-full ${theme === 'light' ? 'border-gray-200' : 'border-tech-purple/20'} border animate-pulse-glow`}>
                   {skill.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">{skill.title}</h3>
-                <p className="text-gray-400">{skill.description}</p>
+                <h3 className={`text-xl font-semibold mb-2 ${theme === 'light' ? 'text-gray-800' : 'text-white'}`}>{skill.title}</h3>
+                <p className={`${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>{skill.description}</p>
               </CardContent>
             </Card>
           ))}
