@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				tech: {
+					dark: '#121212',
+					darker: '#0A0A0A',
+					blue: '#00A3FF',
+					purple: '#8A2BE2',
+					gray: '#333333',
+					lightgray: '#555555'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				mono: ['JetBrains Mono', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,25 +73,43 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 5px rgba(138, 43, 226, 0.2), 0 0 20px rgba(138, 43, 226, 0.2)'
 					},
-					to: {
-						height: '0'
+					'50%': { 
+						boxShadow: '0 0 15px rgba(138, 43, 226, 0.5), 0 0 30px rgba(138, 43, 226, 0.3)' 
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-8px)' }
+				},
+				'typing': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 3s infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'typing': 'typing 3.5s steps(40, end)'
+			},
+			backgroundImage: {
+				'tech-grid': 'radial-gradient(rgba(138, 43, 226, 0.15) 2px, transparent 2px)',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+			},
+			backgroundSize: {
+				'tech-grid-size': '30px 30px'
 			}
 		}
 	},
