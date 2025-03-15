@@ -12,7 +12,7 @@ const ThemeToggle: React.FC = () => {
       pressed={theme === 'light'} 
       onPressedChange={toggleTheme}
       aria-label="Toggle theme"
-      className="bg-tech-darker/70 border border-tech-purple/30 hover:border-tech-purple/60 p-2 rounded-full"
+      className={`${theme === 'light' ? 'bg-white/80 border-tech-purple/30' : 'bg-tech-darker/70 border-tech-purple/30'} border hover:border-tech-purple/60 p-2 rounded-full`}
     >
       {theme === 'dark' ? (
         <Sun className="h-5 w-5 text-yellow-400" />

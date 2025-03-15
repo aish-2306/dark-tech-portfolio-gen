@@ -91,6 +91,10 @@
     @apply bg-tech-dark;
   }
   
+  .light-theme .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+  }
+  
   .scrollbar-thin::-webkit-scrollbar-thumb {
     @apply bg-tech-purple/30 rounded-full;
   }
@@ -112,7 +116,7 @@
   }
 
   .light-theme .tech-card {
-    @apply bg-white/90 shadow-md;
+    @apply bg-white/90 shadow-md border border-gray-200 hover:border-tech-purple/30;
   }
 
   @keyframes cursor-blink {
