@@ -28,16 +28,48 @@
     --ring: 240 4.9% 83.9%;
     --radius: 0.5rem;
   }
+
+  .light-theme {
+    --background: 0 0% 97%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 236 96% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 3.7% 95.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 268 75% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border selection:bg-tech-purple/20 selection:text-white;
+    @apply border-border selection:bg-tech-purple/20 selection:text-foreground;
   }
   
   body {
-    @apply bg-tech-dark text-foreground antialiased;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  .dark-theme body {
+    @apply bg-tech-dark text-foreground;
     background-image: radial-gradient(rgba(138, 43, 226, 0.06) 2px, transparent 2px);
+    background-size: 30px 30px;
+  }
+
+  .light-theme body {
+    @apply bg-gray-100 text-gray-800;
+    background-image: radial-gradient(rgba(138, 43, 226, 0.04) 2px, transparent 2px);
     background-size: 30px 30px;
   }
 
@@ -77,5 +109,18 @@
   
   .tech-card {
     @apply bg-tech-darker/80 backdrop-blur-sm border border-tech-purple/20 rounded-lg p-6 hover:border-tech-purple/40 transition-all duration-300;
+  }
+
+  .light-theme .tech-card {
+    @apply bg-white/90 shadow-md;
+  }
+
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .cursor-blink {
+    animation: cursor-blink 1s infinite;
   }
 }
